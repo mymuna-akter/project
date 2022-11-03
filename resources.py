@@ -8,16 +8,16 @@ from db_connections import db
 class UserResource(Resource):
     def get(self):
         users = db.session.query(User).all()
-        # _dicts = []
-        # for user in users:
-        #     _dicts.append({
-        #         "id": user.id,
-        #         "first_name": user.first_name,
-        #         "last_name": user.last_name,
-        #         "user_type": user.user_type
-        #     })
+        _dicts = []
+        for user in users:
+            _dicts.append({
+                "id": user.id,
+                "first_name": user.first_name,
+                "last_name": user.last_name,
+                "user_type": user.user_type
+            })
 
-        return make_response(jsonify({"helllo": 123}), 200)
+        return make_response(jsonify(_dicts), 200)
 
     def post(self):
         data = request.get_json()

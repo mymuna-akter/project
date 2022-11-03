@@ -80,6 +80,17 @@ curl --location --request POST 'http://127.0.0.1:5000/user' \
  "parent_id": 1
 }'
 ```
+sample 3
+```
+curl --location --request PUT 'http://127.0.0.1:5000/user' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+  
+  "user_id":1,
+ "first_name":"z"
+
+}'
+```
 
 ## Testing
 
