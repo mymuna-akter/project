@@ -93,11 +93,11 @@ curl --location --request PUT 'http://127.0.0.1:5000/user' \
 ```
 
 ## Testing
-run the project's test
 
 ``` python
 pytest tests/test.py
 ```
+This command will run the test, it will create a user with a specific payload and then check whether that user gets created successfully or not.
 
 
 
