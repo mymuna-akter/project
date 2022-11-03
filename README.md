@@ -82,6 +82,10 @@ curl --location --request POST 'http://127.0.0.1:5000/user' \
 ```
 sample 3
 ```
+curl --location --request GET 'http://127.0.0.1:5000/user'
+```
+sample 4
+```
 curl --location --request PUT 'http://127.0.0.1:5000/user' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -91,7 +95,35 @@ curl --location --request PUT 'http://127.0.0.1:5000/user' \
 
 }'
 ```
+sample 5
+```
+curl --location --request DELETE 'http://127.0.0.1:5000/user' \
+--header 'Content-Type: application/json' \
+--data-raw '{
 
+"user_id":1
+}'
+```
+sample 6
+```
+curl --location --request GET 'http://127.0.0.1:5000/user/1'
+```
+sample 7
+```
+curl --location --request GET 'http://127.0.0.1:5000/parent-ids'
+```
+sample 8
+```
+curl --location --request GET 'http://127.0.0.1:5000/child-ids'
+```
+sample 9
+```
+curl --location --request GET 'http://127.0.0.1:5000/parent/1'
+```
+sample 10
+```
+curl --location --request GET 'http://127.0.0.1:5000/child/1'
+```
 ## Testing
 
 ``` python
