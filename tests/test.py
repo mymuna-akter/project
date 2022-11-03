@@ -16,7 +16,7 @@ def client():
         db.drop_all()
 
 
-def test_create_user():
+def test_create_user(client):
     rv = client.post('/user', json={
         "first_name":"X",
         "last_name":"y",
